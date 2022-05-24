@@ -1,5 +1,4 @@
 <template>
-    <v-card>
         <v-card-text style="height: 100px; position: relative">
             <v-fab-transition>
               <v-btn
@@ -14,7 +13,6 @@
               </v-btn>
             </v-fab-transition>
           </v-card-text>
-    </v-card>
 </template>
 <script>
 export default {
