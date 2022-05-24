@@ -21,18 +21,17 @@
             
         </v-chip-group>
         </v-col>
-        </v-row>
         <v-col
-      align="right"
-      cols="2"
-      sm="2"
-      md="3">
-      <v-autocomplete
+        cols="2"
+        sm="2"
+        md="3">
+        <v-autocomplete
               v-model="values"
               outlined
               dense
               label="Lorem ipsum"></v-autocomplete>
       </v-col>
+        </v-row>
       
   </v-container>
 
