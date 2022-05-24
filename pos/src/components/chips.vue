@@ -22,8 +22,7 @@
         </v-chip-group>
         </v-col>
         </v-row>
-
-      <v-col
+        <v-col
       align="right"
       cols="2"
       sm="2"
@@ -34,6 +33,7 @@
               dense
               label="Lorem ipsum"></v-autocomplete>
       </v-col>
+      
   </v-container>
 
   </div>
