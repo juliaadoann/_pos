@@ -156,7 +156,15 @@
     </v-sheet>
     </v-bottom-sheet>
 
-    <v-bottom-sheet
+
+      <v-btn icon>
+        <v-icon v-bind="attrs" v-on="on">mdi-dots-vertical</v-icon>
+      </v-btn>
+
+
+
+
+    <!-- <v-bottom-sheet
     v-model="sheet"
     inset
     >
@@ -181,7 +189,8 @@
           Officiis debitis
         </div>
     </v-sheet>
-    </v-bottom-sheet>
+    </v-bottom-sheet> -->
+
 
       
     </v-app-bar>

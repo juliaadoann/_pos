@@ -4,6 +4,7 @@
               <v-btn
                 v-show="!hidden"
                 color="grey enlighten-1"
+                class="button"
                 fixed left bottom
                 dark
                 absolute
@@ -19,3 +20,8 @@ export default {
     name:'fabButton'
 }
 </script>
+<style scoped>
+.button {
+  margin-bottom: 40px
+}
+</style>
