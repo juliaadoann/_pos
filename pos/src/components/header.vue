@@ -6,7 +6,8 @@
       elevate-on-scroll
       scroll-target="#scrolling-techniques-7"
     >
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click="sheet = !sheet"></v-app-bar-nav-icon>
+      
 
       <v-icon>home</v-icon>
       <v-toolbar-title >Home</v-toolbar-title>
