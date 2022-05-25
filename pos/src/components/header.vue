@@ -6,8 +6,30 @@
       elevate-on-scroll
       scroll-target="#scrolling-techniques-7"
     >
-      <v-app-bar-nav-icon @click="sheet = !sheet"></v-app-bar-nav-icon>
-      
+    <v-bottom-sheet
+    v-model="sheet"
+    inset
+    >
+    <template v-slot:activator="{ on, attrs }">
+      <v-app-bar-nav-icon v-bind="attrs" v-on="on"></v-app-bar-nav-icon>
+    </template>
+    <v-sheet
+    class="text-center"
+    height = "200px"
+    >
+    <v-btn
+          class="mt-6"
+          text
+          color="error"
+          @click="sheet = !sheet"
+        >
+          close
+        </v-btn>
+      <div class="my-3">
+          Officiis debitis
+        </div>
+    </v-sheet>
+  </v-bottom-sheet>
 
       <v-icon>home</v-icon>
       <v-toolbar-title >Home</v-toolbar-title>
