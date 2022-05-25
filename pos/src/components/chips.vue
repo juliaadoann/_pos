@@ -3,8 +3,8 @@
       <v-container style="margin-left: 20px">
         <v-row>
     <v-col
-      cols="12"
-      sm="20"
+      cols="10"
+      sm="10"
       md="10"
     >
       
@@ -24,7 +24,7 @@
         <v-col
         cols="2"
         sm="2"
-        md="3">
+        md="2">
         <v-autocomplete
               v-model="values"
               outlined

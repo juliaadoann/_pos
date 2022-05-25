@@ -62,6 +62,7 @@ export default {
         'Contenido aquí',
         'Al contrario',
       ]
-    })
+    }),
+    
 }
 </script>
