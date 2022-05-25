@@ -7,32 +7,7 @@
       scroll-target="#scrolling-techniques-7"
     >
 
-    <!-- <v-bottom-sheet
-    v-model="sheet"
-    inset
-    >
-    <template v-slot:activator="{ on, attrs }">
-      <v-app-bar-nav-icon v-bind="attrs" v-on="on"></v-app-bar-nav-icon>
-    </template>
-    <v-sheet
-    class="text-center"
-    height = "900px"
-    >
-      <div class="my-3">
-          Officiis debitis
-        </div>
-      <v-btn
-          class="mt-6"
-          text
-          color="black"
-          @click="sheet = !sheet"
-        >
-          close
-        </v-btn>
-    </v-sheet>
-  </v-bottom-sheet> -->
-
-  <!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon> -->
+  <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
 
 
@@ -160,7 +135,7 @@
   </v-bottom-sheet>
 
   <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
+        <v-icon @click.stop="drawer = !drawer">mdi-dots-vertical</v-icon>
       </v-btn>
   
     
@@ -180,28 +155,16 @@
       >
         <v-list-item-group
           v-model="group"
-          active-class="deep-purple--text text--accent-4"
+          active-class="black--text text--accent-4"
         >
         <div v-for="item in dropdownitems" :key="item">
           <v-list-item>
             <v-list-item-title>{{item}}</v-list-item-title>
           </v-list-item>
         </div>
-
-          <v-list-item>
-            <v-list-item-title>Bar</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Fizz</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Buzz</v-list-item-title>
-          </v-list-item>
         </v-list-item-group>
       </v-list>
-    </v-navigation-drawer>
+  </v-navigation-drawer>
 
     </div>
  

@@ -7,7 +7,6 @@
       sm="10"
       md="10"
     >
-      
         <v-chip-group
           mandatory
           active-class="primary--text">
@@ -18,7 +17,6 @@
             >
               {{ tag }}
             </v-chip>
-            
         </v-chip-group>
         </v-col>
         <v-col
@@ -32,9 +30,7 @@
               label="Lorem ipsum"></v-autocomplete>
       </v-col>
         </v-row>
-      
   </v-container>
-
   </div>
 </template>
 
