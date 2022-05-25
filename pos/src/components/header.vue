@@ -1,4 +1,5 @@
 <template>
+<div>
     <v-app-bar
       absolute
       color="white"
@@ -6,7 +7,7 @@
       scroll-target="#scrolling-techniques-7"
     >
 
-    <v-bottom-sheet
+    <!-- <v-bottom-sheet
     v-model="sheet"
     inset
     >
@@ -29,7 +30,11 @@
           close
         </v-btn>
     </v-sheet>
-  </v-bottom-sheet>
+  </v-bottom-sheet> -->
+
+  <!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon> -->
+
+
 
       <v-icon>home</v-icon>
       <v-toolbar-title >Home</v-toolbar-title>
@@ -154,56 +159,52 @@
     </v-sheet>
   </v-bottom-sheet>
 
+  <v-btn icon>
+        <v-icon>mdi-dots-vertical</v-icon>
+      </v-btn>
+  
+    
+  </v-app-bar>
 
-    <v-sheet>
-      <v-container class="fill-height" fluid>
-      <v-row
-        align ="center"
-        justify ="center"
-      >
-        <v-btn icon>
-        <v-icon @click.stop="drawer = !drawer">mdi-dots-vertical</v-icon>
-        </v-btn>
-      </v-row>
-    </v-container>
-
-
-    <v-navigation-drawer
+  <v-navigation-drawer
       v-model="drawer"
       absolute
+      bottom
       temporary
+      right
+      height="400px"
     >
-    <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="text-h6">
-            Application
-          </v-list-item-title>
-          <v-list-item-subtitle>
-            subtext
-          </v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-
-      <v-divider></v-divider>
-      <v-list dense>
-        <v-list-item
-          v-for="item in items"
-          :key="item.title"
-          link
+      <v-list
+        nav
+        dense
+      >
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
         >
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-            <v-divider></v-divider>
-          </v-list-item-icon>
+        <div v-for="item in dropdownitems" :key="item">
+          <v-list-item>
+            <v-list-item-title>{{item}}</v-list-item-title>
+          </v-list-item>
+        </div>
 
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+          <v-list-item>
+            <v-list-item-title>Bar</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>Fizz</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>Buzz</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    </v-sheet>
-  </v-app-bar> 
+
+    </div>
+ 
 </template>
 
 
@@ -236,6 +237,6 @@ export default {
 </script>
 <style scoped>
 .drawer {
-  height: 500px
+  
 }
 </style>
