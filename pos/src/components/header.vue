@@ -154,11 +154,12 @@
     </v-sheet>
   </v-bottom-sheet>
 
+
     <v-sheet>
-      <v-container class="fill-height">
+      <v-container class="fill-height" fluid>
       <v-row
-        align="center"
-        justify="center"
+        align ="center"
+        justify ="center"
       >
         <v-btn icon>
         <v-icon @click.stop="drawer = !drawer">mdi-dots-vertical</v-icon>
@@ -171,9 +172,19 @@
       v-model="drawer"
       absolute
       temporary
-      position="right"
     >
+    <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="text-h6">
+            Application
+          </v-list-item-title>
+          <v-list-item-subtitle>
+            subtext
+          </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
 
+      <v-divider></v-divider>
       <v-list dense>
         <v-list-item
           v-for="item in items"
