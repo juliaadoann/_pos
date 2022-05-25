@@ -6,6 +6,7 @@
       elevate-on-scroll
       scroll-target="#scrolling-techniques-7"
     >
+    
     <v-bottom-sheet
     v-model="sheet"
     inset
@@ -20,7 +21,7 @@
     <v-btn
           class="mt-6"
           text
-          color="error"
+          color="black"
           @click="sheet = !sheet"
         >
           close
@@ -30,6 +31,7 @@
         </div>
     </v-sheet>
   </v-bottom-sheet>
+  
 
       <v-icon>home</v-icon>
       <v-toolbar-title >Home</v-toolbar-title>
