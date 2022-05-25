@@ -34,7 +34,7 @@ export default {
     myChips,
     myCards,
     myFooter,
-    fabButton
+    fabButton,
   }
 
   

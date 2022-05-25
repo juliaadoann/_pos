@@ -1,5 +1,4 @@
 <template>
-
     <v-app-bar
       absolute
       color="white"
@@ -16,9 +15,12 @@
     </template>
     <v-sheet
     class="text-center"
-    height = "200px"
+    height = "900px"
     >
-    <v-btn
+      <div class="my-3">
+          Officiis debitis
+        </div>
+      <v-btn
           class="mt-6"
           text
           color="black"
@@ -26,12 +28,8 @@
         >
           close
         </v-btn>
-      <div class="my-3">
-          Officiis debitis
-        </div>
     </v-sheet>
   </v-bottom-sheet>
-  
 
       <v-icon>home</v-icon>
       <v-toolbar-title >Home</v-toolbar-title>
@@ -41,7 +39,7 @@
       <div style="margin-top: 30px; margin-right: 20px">
         <v-autocomplete
         v-model="values"
-              :items="items"
+              :items="dropdownitems"
               outlined
               dense
               label="Lorem ipsum">
@@ -154,64 +152,79 @@
           Officiis debitis
         </div>
     </v-sheet>
-    </v-bottom-sheet>
+  </v-bottom-sheet>
 
-
-      <v-btn icon>
-        <v-icon v-bind="attrs" v-on="on">mdi-dots-vertical</v-icon>
-      </v-btn>
-
-
-
-
-    <!-- <v-bottom-sheet
-    v-model="sheet"
-    inset
-    >
-    <template v-slot:activator="{ on, attrs }">
-      <v-btn icon>
-        <v-icon v-bind="attrs" v-on="on">mdi-dots-vertical</v-icon>
-      </v-btn>
-    </template>
-    <v-sheet
-    class="text-center"
-    height = "200px"
-    >
-    <v-btn
-          class="mt-6"
-          text
-          color="black"
-          @click="sheet = !sheet"
-        >
-          close
+    <v-sheet>
+      <v-container class="fill-height">
+      <v-row
+        align="center"
+        justify="center"
+      >
+        <v-btn icon>
+        <v-icon @click.stop="drawer = !drawer">mdi-dots-vertical</v-icon>
         </v-btn>
-      <div class="my-3">
-          Officiis debitis
-        </div>
+      </v-row>
+    </v-container>
+
+
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      temporary
+      position="right"
+    >
+
+      <v-list dense>
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          link
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+            <v-divider></v-divider>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
     </v-sheet>
-    </v-bottom-sheet> -->
-
-
-      
-    </v-app-bar>
-
-    
+  </v-app-bar> 
 </template>
+
 
 <script>
 export default {
     name:  'myHeader',
-    data: () => ({
-      items: [
-        'Lorem ipsum',
+    data () {
+      return {
+        drawer: null,
+        items: [
+          { title: 'Home', icon: 'mdi-view-dashboard' },
+          { title: 'About', icon: 'mdi-forum' },
+        ],
+        dropdownitems: [
+          'Sapien',
         'El punto',
-        'No sólo sobrevivió',
-        'Quedando esencialmente',
-        'Estos textos',
-        'Contenido aquí',
-        'Al contrario',
-      ]
-    }),
+        'Textos',
+        'Contrario',
+        'Contenido',
+        'Sólo',
+        'Esencialmente',
+        'Phasellus',
+        'Sapien',
+        'El punto',
+        ]
+      }
+    }
     
 }
 </script>
+<style scoped>
+.drawer {
+  height: 500px
+}
+</style>
