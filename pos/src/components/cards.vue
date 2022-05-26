@@ -18,7 +18,7 @@
           :color="active ? 'grey lighten-1' : 'white'"
           class="ma-4"
           height="330"
-          width="300"
+          width="230"
           @click="toggle"
         >
         
