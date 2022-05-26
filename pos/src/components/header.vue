@@ -51,7 +51,11 @@
         label="Tel"
         outlined
         dense
-        prepend-inner-icon="mdi-phone"></v-text-field>
+        prepend-inner-icon="mdi-phone"
+        v-model="numberValue"
+        type="number"
+        hide details
+        single-line></v-text-field>
         </v-col>
         <v-col
         cols="12"
