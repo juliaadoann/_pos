@@ -1,5 +1,11 @@
 <template>
-        <v-card-text style="height: 100px; position: relative">
+  <v-menu
+  open-on-hover
+  offset-y
+  bottom right
+  >
+    <template v-slot:activator="{ on, attrs }">
+        <v-card-text style="height: 100px; width: 80px; position: relative">
             <v-fab-transition>
               <v-btn
                 v-show="!hidden"
@@ -9,15 +15,35 @@
                 dark
                 absolute
                 fab
+                v-bind="attrs"
+                v-on="on"
               >
-                <v-icon>mdi-cart-outline</v-icon>
+                <v-icon>mdi-forum</v-icon>
               </v-btn>
             </v-fab-transition>
           </v-card-text>
+        </template>
+      <v-list>
+        <v-list-item
+          v-for="(item, index) in items"
+          :key="index"
+        >
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
+        </v-list-item>
+      </v-list>
+  </v-menu>
 </template>
 <script>
 export default {
-    name:'fabButton'
+    name:'fabButton',
+    data: () => ({
+      items: [
+        { title: 'Click Me' },
+        { title: 'Click Me' },
+        { title: 'Click Me' },
+        { title: 'Click Me' },
+      ]
+    })
 }
 </script>
 <style scoped>

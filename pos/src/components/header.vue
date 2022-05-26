@@ -33,7 +33,7 @@
           v-bind="attrs"
           v-on="on"
         >
-          <v-icon>mdi-note-outline</v-icon>
+          <v-icon>mdi-note-text-outline</v-icon>
         </v-btn>
       </template>
       <v-card>
