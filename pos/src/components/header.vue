@@ -26,32 +26,54 @@
         </v-autocomplete>
       </div>
 
-    <v-bottom-sheet
-    v-model="sheet"
-    inset
-    >
-    <template v-slot:activator="{ on, attrs }">
-      <v-btn icon>
-        <v-icon v-bind="attrs" v-on="on">mdi-note-outline</v-icon>
-      </v-btn>
-    </template>
-    <v-sheet
-    class="text-center"
-    height = "400px"
-    >
-    <v-btn
-          class="mt-6"
-          text
-          color="black"
-          @click="sheet = !sheet"
+    <v-dialog
+      v-model="dialog"
+      width="500px">
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn icon
+          v-bind="attrs"
+          v-on="on"
         >
-          close
+          <v-icon>mdi-note-outline</v-icon>
         </v-btn>
-      <div class="my-3">
-          Officiis debitis
-        </div>
-    </v-sheet>
-    </v-bottom-sheet>
+      </template>
+      <v-card>
+        <v-card-title>
+          <span class="text-h5" style="font-weight: bold">Order History</span>
+        </v-card-title>
+        <v-divider></v-divider>
+        <v-container>
+        <v-row>
+        <v-col
+        cols="12"
+        sm="6"
+        md="9">
+        <v-text-field 
+        label="Tel"
+        outlined
+        dense
+        prepend-inner-icon="mdi-phone"></v-text-field>
+        </v-col>
+        <v-col
+        cols="12"
+        sm="6"
+        md="2">
+        <v-btn type="submit">SUBMIT</v-btn>
+        </v-col>
+        </v-row>
+        </v-container>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            color="black"
+            text
+            @click="dialog = false"
+          >
+            Close
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+      </v-dialog>
 
       <v-dialog
       v-model="dialog"
@@ -66,7 +88,7 @@
       </template>
       <v-card>
         <v-card-title>
-          <span class="text-h5">WISH LIST</span>
+          <span class="text-h5" style="font-weight: bold">Wish List</span>
         </v-card-title>
         <v-divider></v-divider>
         <v-card-text style="padding-top: 20px">
@@ -75,14 +97,14 @@
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn
-            color="grey enlighten-1"
+            color="black"
             text
             @click="dialog = false"
           >
             Close
           </v-btn>
           <v-btn
-            color="grey enlighten-1"
+            color="black"
             text
             @click="dialog = false"
           >
