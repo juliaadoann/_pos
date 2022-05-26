@@ -117,32 +117,44 @@
       </v-card>
       </v-dialog>
 
-    <v-bottom-sheet
-    v-model="sheet"
-    inset
-    >
-    <template v-slot:activator="{ on, attrs }">
-      <v-btn icon>
-        <v-icon v-bind="attrs" v-on="on">mdi-cart-outline</v-icon>
-      </v-btn>
-    </template>
-    <v-sheet
-    class="text-center"
-    height = "200px"
-    >
-    <v-btn
-          class="mt-6"
-          text
-          color="black"
-          @click="sheet = !sheet"
+    <v-dialog
+      v-model="dialog"
+      width="500px">
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn icon
+          v-bind="attrs"
+          v-on="on"
         >
-          close
+          <v-icon>mdi-cart-outline</v-icon>
         </v-btn>
-      <div class="my-3">
-          Officiis debitis
-        </div>
-    </v-sheet>
-    </v-bottom-sheet>
+      </template>
+      <v-card>
+        <v-card-title>
+          <span class="text-h5" style="font-weight: bold">Cart</span>
+        </v-card-title>
+        <v-divider></v-divider>
+        <v-card-text style="padding-top: 20px">
+          Lorem ipsum dolor sit amet
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            color="black"
+            text
+            @click="dialog = false"
+          >
+            Close
+          </v-btn>
+          <v-btn
+            color="black"
+            text
+            @click="dialog = false"
+          >
+            View Cart
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+      </v-dialog>
 
 
     <v-bottom-sheet

@@ -30,7 +30,7 @@
         dense
         prepend-inner-icon="mdi-magnify"></v-text-field>
         </v-col>
-        </v-row>
+      </v-row>
   </v-container>
   </div>
 </template>
