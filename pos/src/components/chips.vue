@@ -56,7 +56,8 @@ export default {
         'Sólo',
         'Esencialmente',
         'Phasellus',
-      ]
+      ],
+      cart: []
     })
 }
 </script>

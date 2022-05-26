@@ -150,7 +150,9 @@
         <v-list-item-group
           v-model="group"
           active-class="black--text text--accent-4"
-        >
+        > 
+        <v-list-item-title>Lorem ipsum</v-list-item-title>
+        <v-divider></v-divider>
         <div v-for="item in dropdownitems" :key="item">
           <v-list-item>
             <v-list-item-title>{{item}}</v-list-item-title>
@@ -171,10 +173,6 @@ export default {
     data () {
       return {
         drawer: null,
-        items: [
-          { title: 'Home', icon: 'mdi-view-dashboard' },
-          { title: 'About', icon: 'mdi-forum' },
-        ],
         dropdownitems: [
           'Sapien',
         'El punto',
