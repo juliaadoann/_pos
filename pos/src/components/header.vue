@@ -90,7 +90,7 @@
       </template>
       <v-card>
         <v-card-title>
-          <span class="text-h5" style="font-weight: bold">Wish List</span>
+          <span class="text-h5" style="font-weight: bold">Loves</span>
         </v-card-title>
         <v-divider></v-divider>
         <v-card-text style="padding-top: 20px">
@@ -103,14 +103,7 @@
             text
             @click="dialog = false"
           >
-            Close
-          </v-btn>
-          <v-btn
-            color="black"
-            text
-            @click="dialog = false"
-          >
-            View Cart
+            Continue Shopping
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -142,14 +135,14 @@
             text
             @click="dialog = false"
           >
-            Close
+            Continue Shopping
           </v-btn>
           <v-btn
             color="black"
             text
             @click="dialog = false"
           >
-            View Cart
+            View Cart & Checkout
           </v-btn>
         </v-card-actions>
       </v-card>
