@@ -58,7 +58,6 @@
       width="500px">
       <template v-slot:activator="{ on, attrs }">
         <v-btn icon
-          color="primary"
           v-bind="attrs"
           v-on="on"
         >
