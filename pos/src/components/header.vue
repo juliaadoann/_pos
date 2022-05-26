@@ -37,7 +37,7 @@
     </template>
     <v-sheet
     class="text-center"
-    height = "200px"
+    height = "400px"
     >
     <v-btn
           class="mt-6"
@@ -64,17 +64,9 @@
     </template>
     <v-sheet
     class="text-center"
-    height = "200px"
+    height = "400px"
     >
-    <v-btn
-          class="mt-6"
-          text
-          color="black"
-          @click="sheet = !sheet"
-        >
-          close
-        </v-btn>
-      <div class="my-3">
+      <div>
           Officiis debitis
         </div>
     </v-sheet>
@@ -107,10 +99,12 @@
     </v-sheet>
     </v-bottom-sheet>
 
+
     <v-bottom-sheet
     v-model="sheet"
     inset
     >
+
     <template v-slot:activator="{ on, attrs }">
       <v-btn icon>
         <v-icon v-bind="attrs" v-on="on">mdi-flag-outline</v-icon>
@@ -199,7 +193,5 @@ export default {
 }
 </script>
 <style scoped>
-.drawer {
-  
-}
+
 </style>

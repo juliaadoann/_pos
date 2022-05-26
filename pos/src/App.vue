@@ -9,7 +9,6 @@
     >
       <v-container style="height: 70px;">
       </v-container>
-
       <myChips/>
       <myCards/>
       <myFooter/>

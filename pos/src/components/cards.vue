@@ -24,7 +24,7 @@
         
         <v-img
           height="150"
-          src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+          src='https://cdn.vuetifyjs.com/images/cards/cooking.png'
           cover
           ></v-img>
 
@@ -32,7 +32,7 @@
       <div align="center">
       <v-card-header-text>
         <div style="height: 25px">
-        <v-card-subtitle>Omnis voluptas (Optio)</v-card-subtitle>
+        <v-card-subtitle>Cras id posuere (Optio)</v-card-subtitle>
         </div>
         <div style="height: 45px">
         <v-card-title class="justify-center" >
@@ -92,10 +92,11 @@ export default {
         'Officiis debitis',
       ],
       cards: [
-        { title: 'Nam libero tempore', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 12 },
-        { title: 'Officiis debitis', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 6 },
-        { title: 'Itaque earum', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 6 },
-      ]
+        { title: 'Libero tempore', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', unit: "Litora" },
+        { title: 'Officiis debitis', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', unit: "Augue"},
+        { title: 'Itaque earum', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', unit: "Class" },
+        { title: 'Donec pharetra', src: 'https://cdn.vuetifyjs.com/images/cards/cooking.png', unit: "Sed" }
+      ],
     })
 }
 </script>
