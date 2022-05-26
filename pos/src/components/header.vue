@@ -147,7 +147,7 @@
       bottom
       temporary
       right
-      height="400px"
+      height="100vh"
     >
       <v-list
         nav

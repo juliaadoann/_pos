@@ -1,6 +1,6 @@
 <template>
     <div>
-      <v-container style="margin-left: 20px">
+      <v-container class="toolbar">
         <v-row>
     <v-col
       cols="12"
@@ -9,7 +9,8 @@
     >
         <v-chip-group
           mandatory
-          active-class="primary--text">
+          active-class="primary--text"
+          >
             <v-chip
             class="ma-2"
               v-for="tag in tags"
@@ -23,17 +24,11 @@
         cols="12"
         sm="6"
         md="2">
-        <!-- <v-autocomplete
-              v-model="values"
-              outlined
-              dense
-              label="Lorem ipsum"></v-autocomplete> -->
-        <!-- <div class="v-text-field__slot">
-          <input id="input-54" type="text" placeholder="Search items">
-        </div> -->
         <v-text-field
         label="Search items"
-        outlined></v-text-field>
+        outlined
+        dense
+        prepend-inner-icon="mdi-magnify"></v-text-field>
         </v-col>
         </v-row>
   </v-container>
@@ -66,5 +61,7 @@ export default {
 }
 </script>
 <style scoped>
-
+.toolbar {
+  margin-left: 20px
+}
 </style>
