@@ -53,24 +53,45 @@
     </v-sheet>
     </v-bottom-sheet>
 
-    <v-bottom-sheet
-    v-model="sheet"
-    inset
-    >
-    <template v-slot:activator="{ on, attrs }">
-      <v-btn icon>
-        <v-icon v-bind="attrs" v-on="on">mdi-heart-outline</v-icon>
-      </v-btn>
-    </template>
-    <v-sheet
-    class="text-center"
-    height = "400px"
-    >
-      <div>
-          Officiis debitis
-        </div>
-    </v-sheet>
-    </v-bottom-sheet>
+      <v-dialog
+      v-model="dialog"
+      width="500px">
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn icon
+          color="primary"
+          v-bind="attrs"
+          v-on="on"
+        >
+          <v-icon>mdi-heart-outline</v-icon>
+        </v-btn>
+      </template>
+      <v-card>
+        <v-card-title>
+          <span class="text-h5">WISH LIST</span>
+        </v-card-title>
+        <v-divider></v-divider>
+        <v-card-text style="padding-top: 20px">
+          Lorem ipsum dolor sit amet
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            color="grey enlighten-1"
+            text
+            @click="dialog = false"
+          >
+            Close
+          </v-btn>
+          <v-btn
+            color="grey enlighten-1"
+            text
+            @click="dialog = false"
+          >
+            View Cart
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+      </v-dialog>
 
     <v-bottom-sheet
     v-model="sheet"
