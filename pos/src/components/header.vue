@@ -62,6 +62,9 @@
         </v-col>
         </v-row>
         </v-container>
+        <v-card-text style="height: 300px">
+          Lorem ipsum dolor sit amet
+        </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn
