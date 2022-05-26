@@ -10,7 +10,7 @@
       show-arrows
     >
       <v-slide-item
-        v-for="n in 15"
+        v-for="n in products.length"
         :key="n"
         v-slot="{ active, toggle }"
       >
@@ -91,12 +91,20 @@ export default {
         'Voluptate velit',
         'Officiis debitis',
       ],
-      cards: [
-        { title: 'Libero tempore', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', unit: "Litora" },
+      products: [
+        { title: 'Libero tempore', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', unit: "Litora", price: "0.0"},
+        { title: 'Officiis debitis', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', unit: "Augue"},
+        { title: 'Itaque earum', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', unit: "Class" },
+        { title: 'Donec pharetra', src: 'https://cdn.vuetifyjs.com/images/cards/cooking.png', unit: "Sed" },
+        { title: 'Libero tempore', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', unit: "Litora", price: "0.0"},
+        { title: 'Officiis debitis', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', unit: "Augue"},
+        { title: 'Itaque earum', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', unit: "Class" },
+        { title: 'Donec pharetra', src: 'https://cdn.vuetifyjs.com/images/cards/cooking.png', unit: "Sed" },
+        { title: 'Libero tempore', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', unit: "Litora", price: "0.0"},
         { title: 'Officiis debitis', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', unit: "Augue"},
         { title: 'Itaque earum', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', unit: "Class" },
         { title: 'Donec pharetra', src: 'https://cdn.vuetifyjs.com/images/cards/cooking.png', unit: "Sed" }
-      ],
-    })
-}
+      ]
+    }),
+    }
 </script>
