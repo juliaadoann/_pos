@@ -128,13 +128,12 @@
     </v-sheet>
   </v-bottom-sheet>
 
-  <v-btn icon>
-        <v-icon @click.stop="drawer = !drawer">mdi-dots-vertical</v-icon>
+  <v-btn icon @click.stop="drawer = !drawer">
+        <v-icon >mdi-dots-vertical</v-icon>
   </v-btn>
   
     
   </v-app-bar>
-
   <v-navigation-drawer
       v-model="drawer"
       absolute
@@ -162,7 +161,7 @@
       </v-list>
   </v-navigation-drawer>
 
-    </div>
+  </div>
  
 </template>
 
