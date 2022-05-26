@@ -10,7 +10,6 @@
     <v-app-bar-nav-icon></v-app-bar-nav-icon>
     </v-btn>
 
-
       <v-icon>home</v-icon>
       <v-toolbar-title >Home</v-toolbar-title>
 
@@ -19,7 +18,7 @@
       <div style="margin-top: 30px; margin-right: 20px">
         <v-autocomplete
         v-model="values"
-              :items="dropdownitems"
+              :items="locations"
               outlined
               dense
               label="Lorem ipsum">
@@ -229,8 +228,8 @@ export default {
     data () {
       return {
         drawer: null,
-        dropdownitems: [
-          'Sapien',
+        locations: [
+        'Sapien',
         'El punto',
         'Textos',
         'Contrario',
