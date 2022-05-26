@@ -121,9 +121,23 @@
         </v-btn>
       </template>
       <v-card>
+        <v-container style="height: 70px">
+        <v-row>
+        <v-col
+        cols="12"
+        sm="12"
+        md="9">
         <v-card-title>
           <span class="text-h5" style="font-weight: bold">Cart</span>
         </v-card-title>
+        </v-col>
+        <v-col>
+          <v-card-subtitle>
+          <span>View all</span>
+        </v-card-subtitle>
+        </v-col>
+        </v-row>
+        </v-container>
         <v-divider></v-divider>
         <v-card-text style="padding-top: 20px">
           Lorem ipsum dolor sit amet
