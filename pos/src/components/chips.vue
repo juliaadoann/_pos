@@ -3,8 +3,8 @@
       <v-container style="margin-left: 20px">
         <v-row>
     <v-col
-      cols="10"
-      sm="10"
+      cols="12"
+      sm="6"
       md="10"
     >
         <v-chip-group
@@ -20,15 +20,21 @@
         </v-chip-group>
         </v-col>
         <v-col
-        cols="2"
-        sm="2"
+        cols="12"
+        sm="6"
         md="2">
-        <v-autocomplete
+        <!-- <v-autocomplete
               v-model="values"
               outlined
               dense
-              label="Lorem ipsum"></v-autocomplete>
-      </v-col>
+              label="Lorem ipsum"></v-autocomplete> -->
+        <!-- <div class="v-text-field__slot">
+          <input id="input-54" type="text" placeholder="Search items">
+        </div> -->
+        <v-text-field
+        label="Search items"
+        outlined></v-text-field>
+        </v-col>
         </v-row>
   </v-container>
   </div>
@@ -59,3 +65,6 @@ export default {
     })
 }
 </script>
+<style scoped>
+
+</style>

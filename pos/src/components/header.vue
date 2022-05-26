@@ -6,9 +6,9 @@
       elevate-on-scroll
       scroll-target="#scrolling-techniques-7"
     >
-
-  <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
+    <v-btn icon>
+    <v-app-bar-nav-icon></v-app-bar-nav-icon>
+    </v-btn>
 
 
       <v-icon>home</v-icon>
@@ -128,7 +128,7 @@
         >
           close
         </v-btn>
-      <div class="my-3">
+        <div class="my-3">
           Officiis debitis
         </div>
     </v-sheet>
@@ -136,7 +136,7 @@
 
   <v-btn icon>
         <v-icon @click.stop="drawer = !drawer">mdi-dots-vertical</v-icon>
-      </v-btn>
+  </v-btn>
   
     
   </v-app-bar>
